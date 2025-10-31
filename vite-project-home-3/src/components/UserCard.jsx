@@ -13,7 +13,9 @@ function UserCard({ user }) {
       <li>👤 {user.name}</li>
       <li>📧 {user.email}</li>
       <li>📞 {user.phone}</li>
-      <button onClick={handleToggle}>toggle</button>
+      <button onClick={handleToggle}>
+        {show ? "Hide Posts" : "Show Posts"}
+      </button>
       {show && <PostList userId={user.id} />}
     </ul>
   );
